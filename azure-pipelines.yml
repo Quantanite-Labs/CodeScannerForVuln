@@ -1,0 +1,13 @@
+trigger:
+- main
+
+pool: 
+  vmImage: ubuntu-latest
+
+
+stages:
+  - stage: A
+    jobs:
+      - job: Stage-A-job1
+        steps:
+          - script: echo "Stage A Job 1"
