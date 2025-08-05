@@ -12,3 +12,7 @@ stages:
         steps:
           - script: echo "Stage A Job 1"
           - script: echo "This is Job 1 from stage A and step 2 using script"
+
+          - script: |
+              echo "Stage A Job 1"
+              echo "This is Job 1 from stage A and step 2 using script"
