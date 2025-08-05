@@ -8,6 +8,8 @@ stages:
   - stage: A
     jobs:
       - job: A
+        steps:
+          - script: exit 1
 
   - stage: B
     condition: failed()
