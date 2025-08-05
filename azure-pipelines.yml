@@ -11,9 +11,6 @@ stages:
     jobs:
       - job: Stage_A_job1
         steps:
-          - script: echo "Stage A Job 1"
-          - script: echo "This is Job 1 from stage A and step 2 using script"
-
           - script: |
               echo "Stage A Job 1"
               echo "This is Job 1 from stage A and step 2 using script"
@@ -23,3 +20,17 @@ stages:
       - job: 
         steps:
           - bash: echo Hi from Stage B
+            
+  - stage: C
+    displayName: This is stage C
+    jobs:
+      - job: 
+        steps:
+          - bash: echo Hi from Stage C. Multi-Stage Configuration. This one uses stage level pool.
+          
+  - stage: D
+    displayName: This is stage D
+    jobs:
+      - job: 
+        steps:
+          - bash: echo Hi from Stage D. Multi-Stage Configuration. This one uses stage level pool.
