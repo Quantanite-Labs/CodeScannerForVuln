@@ -1,36 +1,20 @@
 trigger:
 - main
 
-pool: 
-  vmImage: ubuntu-latest
-
 
 stages:
   - stage: A
     displayName: This is stage A
+    pool:
+      vmImage: ubuntu-latest
     jobs:
       - job: Stage_A_job1
+      - job: JobWithJobSpecificPool
+        displayName: Job B running on windows machine
+        pool:
+          vmImage: windows-latest
         steps:
           - script: |
               echo "Stage A Job 1"
               echo "This is Job 1 from stage A and step 2 using script"
-  - stage: B
-    displayName: This is stage B
-    jobs:
-      - job: 
-        steps:
-          - bash: echo Hi from Stage B
-            
-  - stage: C
-    displayName: This is stage C
-    jobs:
-      - job: 
-        steps:
-          - bash: echo Hi from Stage C. Multi-Stage Configuration. This one uses stage level pool.
-          
-  - stage: D
-    displayName: This is stage D
-    jobs:
-      - job: 
-        steps:
-          - bash: echo Hi from Stage D. Multi-Stage Configuration. This one uses stage level pool.
+ 
