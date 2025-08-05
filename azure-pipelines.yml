@@ -12,20 +12,22 @@ stages:
           - script: echo "Running Job A from Stage QA"
 
   - stage: Prod
+    dependsOn: []
     jobs:
       - job: ProdJob
         steps:
           - script: echo "Running ProdJob After Stage QA"
-  - stage: Test
-    dependsOn: QA
-    jobs:
-      - job: Test
-        steps:
-          - script: echo Test stage
+  # - stage: Test
+  #   dependsOn: QA
+  #   jobs:
+  #     - job: Test
+  #       steps:
+  #         - script: echo Test stage
 
 
 
 
+# Multistage congif with different pool images at stage and job level 
 # stages:
 #   - stage: A
 #     displayName: This is stage A
