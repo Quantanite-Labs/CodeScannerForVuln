@@ -8,6 +8,6 @@ pool:
 stages:
   - stage: A
     jobs:
-      - job: Stage-A-job1
+      - job: Stage_A_job1
         steps:
           - script: echo "Stage A Job 1"
