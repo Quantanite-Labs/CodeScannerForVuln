@@ -5,18 +5,34 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-  - stage: QA
+  - stage: stage1
     jobs:
       - job: QAJob
         steps:
-          - script: echo "Running Job A from Stage QA"
+          - script: echo "Running stage1"
 
-  - stage: Prod
-    dependsOn: []
+  - stage: stage2
+    dependsOn: stage1
     jobs:
       - job: ProdJob
         steps:
-          - script: echo "Running ProdJob After Stage QA"
+          - script: echo "Running stage2"
+  
+  - stage: stage3
+    dependsOn: stage1
+    jobs:
+      - job: ProdJob
+        steps:
+          - script: echo "Running stage3"
+
+  - stage: stage4
+    dependsOn: 
+    - stage2
+    - stage3
+    jobs:
+      - job: ProdJob
+        steps:
+          - script: echo "Running stage4"
   # - stage: Test
   #   dependsOn: QA
   #   jobs:
