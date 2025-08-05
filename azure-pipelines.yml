@@ -9,10 +9,10 @@ stages:
     jobs:
       - job: A
         steps:
-          - script: exit 1
+          - script: echo stageA wored
 
   - stage: B
-    condition: succeeded()
+    condition: succeeded('A')
     jobs:
       - job: B
         
