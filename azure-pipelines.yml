@@ -7,6 +7,7 @@ pool:
 
 stages:
   - stage: A
+    displayName: This is stage A
     jobs:
       - job: Stage_A_job1
         steps:
@@ -16,3 +17,9 @@ stages:
           - script: |
               echo "Stage A Job 1"
               echo "This is Job 1 from stage A and step 2 using script"
+  - stage: B
+    displayName: This is stage B
+    jobs:
+      - job: 
+        steps:
+          - bash: echo Hi from Stage B
