@@ -12,12 +12,12 @@ stages:
           - script: echo "Running Job A from Stage QA"
 
   - stage: Prod
-    # dependsOn: QA
     jobs:
       - job: ProdJob
         steps:
           - script: echo "Running ProdJob After Stage QA"
   - stage: Test
+    dependsOn: QA
     jobs:
       - job: Test
         steps:
