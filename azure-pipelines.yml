@@ -12,7 +12,7 @@ stages:
           - script: exit 1
 
   - stage: B
-    condition: failed()
+    condition: succeeded()
     jobs:
       - job: B
         
