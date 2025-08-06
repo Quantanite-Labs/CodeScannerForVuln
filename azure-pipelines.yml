@@ -13,7 +13,8 @@ parameters:
 
     
 steps:
-  - script: echo Hello World
+  - script: echo "Running on $(Agent.OS)"
+  
 
 
 
