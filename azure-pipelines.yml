@@ -1,20 +1,27 @@
-trigger:
-- none
+  trigger:
+  - none
 
-parameters:
-  - name: Image
-    displayName: PoolImage
-    default: windows-latest
-    type: string
-    values:
-      - windows-latest
-      - ubuntu-latest
-      - macOS-latest
+  parameters:
+    - name: Image
+      displayName: PoolImage
+      default: windows-latest
+      type: string
+      values:
+        - windows-latest
+        - ubuntu-latest
+        - macOS-latest
 
+      
+  jobs:
+  - job: RunOnSelectedOS
+    displayName: 'Run on selected OS image'
+    pool:
+      vmImage: ${{ parameters.Image }}
+
+    steps:
+      - script: echo "Running on $AGENT_OS"
+        displayName: 'Show OS'
     
-steps:
-  - script: echo "Running on $AGENT_OS"
-  
 
 
 
