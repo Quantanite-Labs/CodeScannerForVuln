@@ -13,7 +13,7 @@ parameters:
 
     
 steps:
-  - script: echo "Running on $(Agent.OS)"
+  - script: echo "Running on $AGENT_OS"
   
 
 
