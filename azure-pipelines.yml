@@ -1,5 +1,5 @@
   trigger:
-  - none
+  - main
 
   parameters:
     - name: Image
@@ -21,6 +21,11 @@
     steps:
       - script: echo "Running on $AGENT_OS"
         displayName: 'Show OS'
+      - script: |
+          echo "Simulating long task..."
+          sleep 60
+        displayName: 'Test Sleep Step'
+
     
 
 
