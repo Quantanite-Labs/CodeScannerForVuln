@@ -1,3 +1,7 @@
+[![Build Status](https://dev.azure.com/QuantaniteLabs/Quantanite-Labs/_apis/build/status%2FQuantanite-Labs.CodeScannerForVuln?branchName=main)](https://dev.azure.com/QuantaniteLabs/Quantanite-Labs/_build/latest?definitionId=86&branchName=main)
+
+The status badge displayed above provides real-time insights into the build pipeline for this project, powered by Azure DevOps. It reflects the latest build status of the main branch for the Quantanite-Labs.CodeScannerForVuln pipeline. This badge serves as a quick visual indicator of the project's current health—automatically updating to show whether the most recent build has succeeded or failed. By clicking the badge, users are directed to the Azure DevOps pipeline view, where they can explore detailed build logs, history, and diagnostics. This helps maintain transparency in the development workflow and ensures continuous integration is functioning as expected.
+
 <div align="center">
     <picture>
         <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/7659/174594540-5e29e523-396a-465b-9a6e-6cab5b15a568.svg">
