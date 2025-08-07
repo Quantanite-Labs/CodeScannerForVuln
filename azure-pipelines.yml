@@ -24,6 +24,7 @@
       - script: |
           echo "Simulating long task..."
           sleep 60
+          exit 1
         displayName: 'Test Sleep Step'
 
     
