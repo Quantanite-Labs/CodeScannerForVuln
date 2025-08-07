@@ -4,7 +4,7 @@
   parameters:
     - name: Image
       displayName: PoolImage
-      default: windows-latest
+      default: ubuntu-latest
       type: string
       values:
         - windows-latest
